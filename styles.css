@@ -1,0 +1,69 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: url('images/background.jpg') no-repeat top center fixed;
+    background-size: cover;
+    margin: 0;
+    flex-direction: column;
+}
+
+.heading {
+    font-size: 3em; /* Adjust the size as needed */
+    color: #ffffff; /* White text color */
+    text-align: center;
+    margin: 20px 0;
+}
+
+.wheel-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+
+.wheel {
+    width: 200px;
+    height: 200px;
+    border: 30px solid #333;
+    border-radius: 50%;
+    background: conic-gradient(
+        #ffffff 0% 2%,
+        #33FF57 2% 45%,
+        #3357FF 45% 75%,
+        #FF33A1 75% 100%
+    );
+    position: relative;
+    transition: transform 4s ease-out;
+}
+
+.pin {
+    width: 0;
+    height: 0;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-bottom: 20px solid #333;
+    position: absolute;
+    top: -30px; /* Adjust this value to position the pin correctly */
+    z-index: 10;
+}
+
+.spin-button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    display: none; /* Hidden by default */
+}
+
+.images-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.images-container img {
+    max-width: 100px;
+    margin: 0 10px;
+}
